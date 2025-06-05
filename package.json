@@ -1,6 +1,7 @@
 {
-  "name": "ether-automotive-website",
-  "version": "1.0.0",
+  "name": "ether-automotive",
+  "version": "0.1.0",
+  "private": true,
   "description": "A website for Ether Automotive showcasing electric vehicles and services.",
   "main": "src/index.jsx",
   "scripts": {
