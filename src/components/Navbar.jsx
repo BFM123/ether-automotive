@@ -1,23 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/index.css";
+import { Nav, Logo, Menu } from "../styles/components/NavbarStyles";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <img src="/logo.png" alt="Ether Logo" className="logo" />
-        <nav>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <Nav>
+      <Logo src="/src/assets/logo.jpeg" alt="Ether Automotive" />
+      <Menu>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/contact">Contact</Link>
+      </Menu>
+    </Nav>
   );
-};
-
-export default Navbar;
+}

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Hero = styled.div`
   height: 100vh;
@@ -26,9 +26,19 @@ const Subtitle = styled(motion.p)`
 export default function HeroSection() {
   return (
     <Hero>
-      <Title initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Welcome to Ether Automotive</Title>
-      <Subtitle initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>
-        Innovation in Motion
+      <Title
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Welcome to Ether Automotive
+      </Title>
+      <Subtitle
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        Premium Auto Service & Customization
       </Subtitle>
     </Hero>
   );
