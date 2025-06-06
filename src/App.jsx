@@ -1,13 +1,14 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyles from './styles/shared/GlobalStyles';
-import { theme } from './styles/shared/Theme';import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import { Routes, Route } from "react-router-dom";
+import { theme } from "./styles/shared/Theme";
+import GlobalStyles from "./styles/shared/GlobalStyles";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
 
 function App() {
   return (

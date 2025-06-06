@@ -5,11 +5,19 @@ export const theme = {
     background: '#000',
     surface: '#111',
     text: '#fff',
-    border: '#333'
+    border: '#333',
+    accent: '#e60000'
   },
   spacing: {
-    small: '10px',
-    medium: '20px',
-    large: '40px'
+    xs: '4px',
+    small: '8px',
+    medium: '16px',
+    large: '24px',
+    xl: '32px',
+    xxl: '48px'
+  },
+  layout: {
+    maxWidth: '1200px',
+    headerHeight: '80px'
   }
 };
