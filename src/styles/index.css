@@ -1,18 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
 
@@ -82,9 +68,6 @@
 
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -143,10 +126,6 @@ body {
 
 
 
-
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
 
 .container { padding-inline: 16px; }
 
@@ -390,9 +369,6 @@ body {
 
 
 
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
 
 .hero {
   position: relative;
@@ -431,9 +407,6 @@ body {
 
 
 
-/*-----------------------------------*\
-  #SERVICE
-\*-----------------------------------*/
 
 .service-banner { display: none; }
 
@@ -461,9 +434,7 @@ body {
 
 
 
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
+
 
 .about {
   background-color: var(--space-cadet);
@@ -503,12 +474,6 @@ body {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #WORK
-\*-----------------------------------*/
 
 .work .container { padding-inline: 0; }
 
@@ -553,9 +518,6 @@ body {
 
 
 
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
 
 .footer { color: var(--cadet-blue-creyola); }
 
@@ -625,40 +587,14 @@ body {
 }
 
 
-
-
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
-
-/**
- * responsive for large than 575px screen
- */
-
 @media (min-width: 575px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
-
   :root {
-
-    /**
-     * typography
-     */
 
     --fs-2: 4rem;
     --fs-3: 2.8rem;
     --fs-4: 2rem;
-
   }
-
-
-
-  /**
-   * REUSED STYLE
-   */
 
   .container {
     max-width: 540px;
@@ -671,40 +607,20 @@ body {
   .h2 { font-weight: var(--fw-700); }
 
 
-
-  /**
-   * HERO
-   */
-
   .hero .container { max-width: unset; }
-
   .hero-content {
     max-width: 520px;
     margin-inline: auto;
   }
 
   .hero .section-text { font-size: 1.8rem; }
-
-
-
-  /**
-   * SERVICE
-   */
-
   .service .section-title { margin-block-end: 30px; }
-
   .service-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-block-end: 40px;
   }
-
-  
-
-  /**
-   * ABOUT
-   */
 
   .about-list {
     grid-template-columns: 1fr 1fr;
@@ -714,18 +630,7 @@ body {
   .about-item { padding-block: 20px; }
 
 
-
-  /**
-   * WORK
-   */
-
   .scrollbar-item { min-width: calc(50% - 15px); }
-
-
-
-  /**
-   * FOOTER
-   */
 
   .footer-top {
     position: relative;
@@ -743,37 +648,15 @@ body {
 
 }
 
-
-
-
-
-/**
- * responsive for large than 768px screen
- */
-
 @media (min-width: 768px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
 
   :root {
-
-    /**
-     * typography
-     */
-
     --fs-1: 4rem;
     --fs-2: 5rem;
     --fs-3: 3.4rem;
-
   }
 
-
-
-  /**
-   * REUSED STYLE
-   */
 
   .container,
   .hero-content { max-width: 720px; }
@@ -787,21 +670,9 @@ body {
     margin-inline: auto;
   }
 
-
-
-  /**
-   * HERO
-   */
-
   .hero { --section-padding: 120px; }
-
   .hero .section-text { margin-block-end: 30px; }
 
-
-
-  /**
-   * SERVICE
-   */
 
   .service-banner {
     display: block;
@@ -818,83 +689,29 @@ body {
     width: 150%;
     transform-origin: top;
   }
-
-
-
-  /**
-   * ABOUT
-   */
-   
   .about-banner { max-width: max-content; }
-
   .about-banner,
   .about .section-text { margin-inline: auto; }
-
   .about .section-text { max-width: 520px; }
-
-
-
-  /**
-   * FOOTER
-   */
-
   .footer-top .container { grid-template-columns: 1fr 0.9fr 0.9fr; }
-
   .copyright { --fs-6: 1.4rem; }
-
 }
 
 
-
-
-
-/**
- * responsive for large than 992px screen
- */
-
 @media (min-width: 992px) {
-
-  /**
-   * CUSTOM PROPERTY
-   */
-
   :root {
-
-    /**
-     * typography
-     */
-
     --fs-2: 4.4rem;
     --fs-3: 3.8rem;
     --fs-4: 2.2rem;
-
-    /**
-     * spacing
-     */
 
     --section-padding: 100px;
 
   }
 
-
-
-  /**
-   * REUSED STYLE
-   */
-
   .container { max-width: 960px; }
-
   .section-text,
   .card-text { font-size: 1.8rem; }
-
-
-
-  /**
-   * HEADER
-   */
-
   .nav-toggle-btn { display: none; }
-
   .header .container { gap: 30px; }
 
   .navbar,
@@ -903,19 +720,15 @@ body {
     display: block;
     margin-inline-start: auto;
   }
-
   .navbar-list { display: flex; }
-
   .navbar-link {
     position: relative;
     font-size: unset;
   }
-
   .navbar-link:is(:hover, :focus-visible) {
     background: none;
     color: var(--white);
   }
-
   .navbar-link::after {
     content: url("../images/nav-before-img.png");
     position: absolute;
@@ -924,7 +737,6 @@ body {
     transform: translateX(-50%);
     opacity: 0;
   }
-
   .navbar-link:is(:hover, :focus-visible)::after { opacity: 1; }
 
   .header .btn {
@@ -932,12 +744,6 @@ body {
     padding: 12px 24px;
     font-size: var(--fs-5);
   }
-
-
-
-  /**
-   * HERO
-   */
 
   .hero {
     text-align: left;
@@ -948,18 +754,10 @@ body {
     max-width: 960px;
     grid-template-columns: 1fr 1fr;
   }
-
   .hero :is(.section-subtitle, .btn) { margin-inline: 0; }
-
   .hero .section-title { text-align: left; }
-
   .hero-banner img { width: 55%; }
 
-
-
-  /**
-   * SERVICE
-   */
 
   .service-card .card-text {
     padding-inline: 25px;
@@ -968,9 +766,7 @@ body {
   }
 
   .service-list li:nth-child(-2n+3) { margin-block-start: 90px; }
-
   .service-list li:nth-child(4) { margin-inline-end: 60px; }
-
   .service-list li:nth-child(6) { margin-inline-start: 60px; }
 
   .service-banner img {
@@ -978,13 +774,6 @@ body {
     margin-block-start: -30%;
     width: 210%;
   }
-
-
-
-  /**
-   * ABOUT
-   */
-
   .about {
     position: relative;
     z-index: 1;
@@ -1020,49 +809,19 @@ body {
     background-position: right;
     z-index: -1;
   }
-
-
-
-  /**
-   * WORK
-   */
-
   .has-scrollbar { overflow-x: visible; }
 
   .scrollbar-item { min-width: calc(33.33% - 20px); }
 
 }
 
-
-
-
-
-/**
- * responsive for large than 1200px screen
- */
-
 @media (min-width: 1200px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
-
   :root {
-
-    /**
-     * typography
-     */
-
     --fs-2: 5rem;
     --fs-3: 4.6rem;
 
   }
-
-
-
-  /**
-   * REUSED STYLE
-   */
 
   .container,
   .hero .container { max-width: 1140px; }
@@ -1073,10 +832,7 @@ body {
 
 
 
-  /**
-   * HEADER
-   */
-
+ 
   .header { padding-block: 25px; }
 
   .logo img { width: 128px; }
@@ -1088,9 +844,6 @@ body {
 
 
 
-  /**
-   * HERO
-   */
 
   .hero { padding-block: 250px 180px; }
 
@@ -1103,11 +856,6 @@ body {
 
   .hero-banner img { width: 70%; }
 
-
-
-  /**
-   * SERVICE
-   */
 
   .service .section-title { max-width: 700px; }
 
@@ -1136,10 +884,6 @@ body {
 
 
 
-  /**
-   * WORK
-   */
-
   .work-card .card-btn {
     font-size: 2.4rem;
     width: 55px;
@@ -1148,9 +892,6 @@ body {
 
 
 
-  /**
-   * FOOTER
-   */
 
   .footer-top { padding-block: 150px; }
 
@@ -1181,37 +922,18 @@ body {
 
 
 
-/**
- * responsive for large than 1400px screen
- */
-
 @media (min-width: 1400px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+
 
   :root {
 
-    /**
-     * typography
-     */
 
     --fs-2: 6rem;
-
-    /**
-     * spacing
-     */
 
     --section-padding: 140px;
 
   }
-
-
-
-  /**
-   * REUSED STYLE
-   */
 
   :is(.header, .hero) .container { max-width: 1280px; }
 
@@ -1222,17 +944,9 @@ body {
 
 
 
-  /**
-   * HEADER
-   */
 
   .header .btn { padding: 18px 36px; }
 
-
-
-  /**
-   * HERO
-   */
 
   .hero { padding-block: 280px; }
 
@@ -1242,19 +956,10 @@ body {
 
 
 
-  /**
-   * ABOUT
-   */
-
   .about::before { width: 55%; }
 
   .about-banner .w-100 { width: 50%; }
 
-
-
-  /**
-   * FOOTER
-   */
 
   .footer-top .container { padding-inline-start: 20%; }
 
