@@ -1,13 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/logo.jpeg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ether Automotive</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+  <title>Etherautomotive- Auto Maintenance & Repair Service</title>
+  <meta name="title" content="Etherautomotive - Auto Maintenance & Repair Service">
+  <meta name="description" content="This is a vehicle repair html template made by codewithsadee">
+
+ 
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Mulish&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,600,0,0" />
+
+  <link rel="stylesheet" href="style.css">
+
+ 
+  <link rel="preload" as="image" href="./image/hero-banner.png">
+  <link rel="preload" as="image" href="./image/hero-bg.jpg">
+
+</head>
+
+<body>
+
+ 
+
+  <header class="header">
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./image/logo.png" width="128" height="63" alt="Ether">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Projects</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <a href="#" class="btn btn-primary">
+        <span class="span">Get a Quote</span>
+
+        <span class="material-symbols-rounded">arrow_forward</span>
+      </a>
+
+      <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+        <span class="nav-toggle-icon icon-1"></span>
+        <span class="nav-toggle-icon icon-2"></span>
+        <span class="nav-toggle-icon icon-3"></span>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero has-bg-image" aria-label="home" style="background-image: url('./image/WhatsApp\ Image\ 2025-06-04\ at\ 23.45.35_b75d27af.jpg')">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="section-subtitle :dark">We have talented engineers & mechanics</p>
+
+            <h1 class="h1 section-title">
+                    Auto-Detailing, Car Wash, Service
+                </h1>
+
+            <p class="section-text">
+             Keep the engine strong and the journey long, With service that's quick and never wrong.
+             Precision care for your vehicle. Because safety and performance matter.
+            </p>
+
+            <a href="#" class="btn">
+              <span class="span">Our Services</span>
+
+              <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+
+          </div>
+
+          <figure class="hero-banner" style="--width: 1228; --height: 789;">
+            <img src="./image/hero-banner.png" width="1228" height="789" alt="red motor vehicle"
+              class="move-anim">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service has-bg-image" aria-labelledby="service-label"
+        style="background-image: url('./assets/images/service-bg.jpg')">
+        <div class="container">
+
+          <p class="section-subtitle :light" id="service-label">Our services</p>
+
+          <h2 class="h2 section-title">We Provide Great Services For your Vehicle</h2>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./image/car-detailer-2-512.webp" width="110" height="110" loading="lazy" alt="Engine Repair">
+                </figure>
+
+                <h3 class="h3 card-title"> Paint Protection Film</h3>
+
+                <p class="card-text">
+                 Shield your car from scratches and sun, With PPF, the protection's just begun.
+                </p>
+
+                <a href="#" class="btn-link">Read more</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./image/5cb5865061948c52d434686f80e0e287.jpg" width="110" height="110" loading="lazy" alt="Brake Repair">
+                </figure>
+
+                <h3 class="h3 card-title">Ceramic, Graphene, Paint Correction</h3>
+
+                <p class="card-text">
+                  Gloss that lasts, protection that stays, Ceramic coating keeps swirl marks away.
+                </p>
+
+                <a href="#" class="btn-link">Read more</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./image/car-cleaning-car-wash-vector-icon-illustration-2G3DC8W.jpg" width="110" height="110" loading="lazy" alt="Tire Repair">
+                </figure>
+
+                <h3 class="h3 card-title">Car Wash</h3>
+
+                <p class="card-text">
+                  Dust off the day, shine your ride, Let our wash bring back your pride.
+                </p>
+
+                <a href="#" class="btn-link">Read more</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./image/car-tinting-icon-sticking-film-600nw-2545094497.webp" width="110" height="110" loading="lazy"
+                    alt="Battery Repair">
+                </figure>
+
+                <h3 class="h3 card-title">Sun Film</h3>
+
+                <p class="card-text">
+                  Block the heat, not your style, Sun film keeps your car cool all the while.
+                </p>
+
+                <a href="#" class="btn-link">Read more</a>
+
+              </div>
+            </li>
+
+            <li class="service-banner">
+              <img src="./image/services-5.png" width="646" height="380" loading="lazy" alt="Red Car"
+                class="move-anim">
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./image/car-service-icon-set-black-white-vector-9418159.jpg" width="110" height="110" loading="lazy"
+                    alt="Steering Repair">
+                </figure>
+
+                <h3 class="h3 card-title">Car Service</h3>
+
+                <p class="card-text">
+                  Your car’s health, our top mission, Expert service with precision.
+                </p>
+
+                <a href="#" class="btn-link">Read more</a>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <a href="#" class="btn">
+            <span class="span">View All Services</span>
+
+            <span class="material-symbols-rounded">arrow_forward</span>
+          </a>
+
+        </div>
+      </section>
+
+
+
+
+      <section class="section about has-before" aria-labelledby="about-label">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./image/about-banner.png" width="540" height="540" loading="lazy"
+              alt="vehicle repire equipments" class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle :dark">About Us</p>
+
+            <h2 class="h2 section-title">We’re Commited to Meet the quality</h2>
+
+            <p class="section-text">
+              We are a trusted car mechanic shop dedicated to keeping your vehicle in top condition. From regular maintenance like oil changes and brake checks to complex engine diagnostics and repairs, we provide fast, reliable, and affordable service.
+            </p>
+
+            <p class="section-text">
+              Our team of skilled mechanics uses modern tools and years of experience to ensure every car leaves our garage running smoothly and safely.
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+                <p>
+                  <strong class="display-1 strong">8K+</strong> Happy Clients
+                </p>
+              </li>
+
+              <li class="about-item">
+                <p>
+                  <strong class="display-1 strong">22+</strong> Instruments
+                </p>
+              </li>
+
+              <li class="about-item">
+                <p>
+                  <strong class="display-1 strong">50+</strong> Years in market
+                </p>
+              </li>
+
+              <li class="about-item">
+                <p>
+                  <strong class="display-1 strong">99%</strong> Projects completed
+                </p>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <section class="section work" aria-labelledby="work-label">
+        <div class="container">
+
+          <p class="section-subtitle :light" id="work-label">Our Work</p>
+
+          <h2 class="h2 section-title">Latest projects we have done</h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="work-card">
+
+                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                  <img src="./image/Screenshot 2025-06-05 231107.png" width="350" height="406" loading="lazy" alt="Engine Repair"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Service</p>
+
+                  <h3 class="h3 card-title">Car Wash</h3>
+
+                  <a href="#" class="card-btn">
+                    <span class="material-symbols-rounded">arrow_forward</span>
+                  </a>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="work-card">
+
+                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                  <img src="./image/Screenshot 2025-06-05 230948.png" width="350" height="406" loading="lazy" alt="Car Tyre change"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Service</p>
+
+                  <h3 class="h3 card-title">Engine Service</h3>
+
+                  <a href="#" class="card-btn">
+                    <span class="material-symbols-rounded">arrow_forward</span>
+                  </a>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="work-card">
+
+                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                  <img src="./image/Screenshot 2025-06-05 231006.png" width="350" height="406" loading="lazy" alt="Battery Adjust"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Service</p>
+
+                  <h3 class="h3 card-title">PPF (Paint Protection Film)</h3>
+
+                  <a href="#" class="card-btn">
+                    <span class="material-symbols-rounded">arrow_forward</span>
+                  </a>
+                </div>
+
+              </div>
+            </li>
+
+             <li class="scrollbar-item">
+              <div class="work-card">
+
+                <figure class="card-banner img-holder" style="--width: 350; --height: 406;">
+                  <img src="./image/Screenshot 2025-06-05 231042.png" width="350" height="406" loading="lazy" alt="Car Tyre change"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Service</p>
+
+                  <h3 class="h3 card-title">Paint Job</h3>
+
+                  <a href="#" class="card-btn">
+                    <span class="material-symbols-rounded">arrow_forward</span>
+                  </a>
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./image/WhatsApp Image 2025-06-04 at 23.45.35_b75d27af.jpg" width="128" height="80" alt="autofix home">
+          </a>
+
+          <p class="footer-text">
+            Rerum necessitatibus saepe eveniet aut et voluptates repudiandae sint et molestiae non recusandae.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./image/facebook.svg" alt="facebook">
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./image/instagram.svg" alt="instagram">
+                <a href="https://www.instagram.com/etherautomotive/" target="_blank">Instagram</a>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <img src="./image/twitter.svg" alt="twitter">
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h3">Opening Hours</p>
+          </li>
+
+          <li>
+            <p class="p">seven days a week</p>
+
+            <span class="span">10am - 8pm</span>
+          </li>
+
+        
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="h3">Contact Info</p>
+          </li>
+
+          <li>
+            <a href="tel:+01234567890" class="footer-link">
+              <span class="material-symbols-rounded">call</span>
+
+              <span class="span">+91 87797 06757</span>
+            </a>
+          </li>
+
+          <li>
+            <address class="footer-link address">
+              <span class="material-symbols-rounded">location_on</span>
+
+              <span class="span"> Navsibai Compound, near Carmel High School, Manpada, Thane West, Thane, Maharashtra 400607 </span>
+            </address>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <img src="./image/footer-shape-3.png" width="637" height="173" loading="lazy" alt="Shape"
+        class="shape shape-3 move-anim">
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">Copyright 2022, codewithsadee All Rights Reserved.</p>
+
+        <img src="./image/footer-shape-2.png" width="778" height="335" loading="lazy" alt="Shape"
+          class="shape shape-2">
+
+        <img src="./image/footer-shape-1.png" width="805" height="652" loading="lazy" alt="Red Car"
+          class="shape shape-1 move-anim">
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+  <script src="./script.js"></script>
+
+</body>
+
 </html>
