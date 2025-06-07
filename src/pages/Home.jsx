@@ -1,10 +1,18 @@
 import React from 'react';
-import HeroSection from '../components/HeroSection';
+import Hero from '../components/Hero';
+import Features from '../components/Features';
+import Services from '../components/Services';
+import TestimonialSlider from '../components/TestimonialSlider';
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      <HeroSection />
-    </div>
+    <>
+      <Hero />
+      <Features />
+      <Services />
+      <TestimonialSlider />
+    </>
   );
-}
+};
+
+export default Home;

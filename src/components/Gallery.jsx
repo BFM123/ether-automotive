@@ -1,33 +1,68 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import {
+  GalleryContainer,
+  GalleryGrid,
+  GalleryItem,
+  GalleryImage,
+  Modal,
+  ModalContent,
+  CloseButton,
+  NavButton
+} from '../styles/components/GalleryStyles';
 
-const Container = styled.div`
-  background: #111;
-  color: #fff;
-  padding: 60px 20px;
-`;
+const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-`;
+  const images = [
+    { id: 1, src: '/src/assets/images/gallery-1.jpg', alt: 'Car Detailing' },
+    { id: 2, src: '/src/assets/images/gallery-2.jpg', alt: 'Paint Protection' },
+    { id: 3, src: '/src/assets/images/gallery-3.jpg', alt: 'Ceramic Coating' },
+    // Add more images as needed
+  ];
 
-const Image = styled.img`
-  width: 100%;
-  border-radius: 10px;
-`;
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
 
-export default function Gallery() {
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
-    <Container>
-      <h2>Showroom Gallery</h2>
-      <Grid>
-        <Image src="https://via.placeholder.com/400x300" alt="Gallery 1" />
-        <Image src="https://via.placeholder.com/400x300" alt="Gallery 2" />
-        <Image src="https://via.placeholder.com/400x300" alt="Gallery 3" />
-        <Image src="https://via.placeholder.com/400x300" alt="Gallery 4" />
-      </Grid>
-    </Container>
+    <GalleryContainer>
+      <GalleryGrid>
+        {images.map((image, index) => (
+          <GalleryItem
+            key={image.id}
+            onClick={() => {
+              setSelectedImage(image);
+              setCurrentIndex(index);
+            }}
+          >
+            <GalleryImage src={image.src} alt={image.alt} />
+          </GalleryItem>
+        ))}
+      </GalleryGrid>
+
+      {selectedImage && (
+        <Modal onClick={() => setSelectedImage(null)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CloseButton onClick={() => setSelectedImage(null)}>
+              <span className="material-symbols-rounded">close</span>
+            </CloseButton>
+            <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
+            <NavButton className="prev" onClick={handlePrev}>
+              <span className="material-symbols-rounded">arrow_back</span>
+            </NavButton>
+            <NavButton className="next" onClick={handleNext}>
+              <span className="material-symbols-rounded">arrow_forward</span>
+            </NavButton>
+          </ModalContent>
+        </Modal>
+      )}
+    </GalleryContainer>
   );
-}
+};
+
+export default Gallery;

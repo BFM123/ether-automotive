@@ -4,32 +4,14 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@assets': path.resolve(__dirname, 'src/assets'),
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@styles': path.resolve(__dirname, 'src/styles')
+      '@': path.resolve(__dirname, './src'),
     }
   },
   server: {
     port: 3000,
-    host: true
-  },
-  build: {
-    outDir: 'dist',
-    assetsInlineLimit: 4096,
-    rollupOptions: {
-      output: {
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.')
-          const ext = info[info.length - 1]
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `assets/images/[name]-[hash][extname]`
-          }
-          return `assets/[name]-[hash][extname]`
-        }
-      }
-    }
+    open: true
   }
 })

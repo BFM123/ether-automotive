@@ -1,37 +1,57 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import {
+  FooterContainer,
+  FooterContent,
+  FooterGrid,
+  FooterSection,
+  SocialLinks,
+  Copyright
+} from '../styles/components/FooterStyles';
 
-const FooterContainer = styled.footer`
-  background: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  margin-top: auto;
-`;
 
-const SocialLinks = styled.div`
-  margin-top: 10px;
-  
-  a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    
-    &:hover {
-      color: #e60000;
-    }
-  }
-`;
+import { Link } from 'react-router-dom';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; {new Date().getFullYear()} Ether Automotive. All rights reserved.</p>
-      <SocialLinks>
-        <a href="https://instagram.com/etherautomotive" target="_blank" rel="noopener noreferrer">
-          Instagram
-        </a>
-      </SocialLinks>
+      <FooterContent>
+        <FooterGrid>
+          <FooterSection>
+            <h3>About Us</h3>
+            <p>Premium automotive services and custom builds for car enthusiasts who demand excellence.</p>
+          </FooterSection>
+          
+          <FooterSection>
+            <h3>Quick Links</h3>
+            <ul>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </FooterSection>
+          
+          <FooterSection>
+            <h3>Contact</h3>
+            <p>123 Auto Street<br />Car City, ST 12345</p>
+            <p>Phone: (555) 123-4567</p>
+          </FooterSection>
+        </FooterGrid>
+        
+        <SocialLinks>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <span className="material-symbols-rounded">photo_camera</span>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <span className="material-symbols-rounded">face</span>
+          </a>
+        </SocialLinks>
+        
+        <Copyright>
+          © {new Date().getFullYear()} Ether Automotive. All rights reserved.
+        </Copyright>
+      </FooterContent>
     </FooterContainer>
   );
-}
+};
+
+export default Footer;

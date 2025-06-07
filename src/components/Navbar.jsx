@@ -1,21 +1,42 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Nav, NavContainer, Logo, Menu } from "@styles/components/NavbarStyles";
-// Import using the new alias
-import logo from "@assets/images/logo.png";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  HeaderContainer,
+  Nav,
+  Logo,
+  NavList,
+  NavLink,
+  QuoteButton
+} from '../styles/components/NavbarStyles';
+import logo from '../assets/images/logo.jpeg';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <Nav>
-      <NavContainer>
-        <Logo src={logo} alt="Ether Automotive" />
-        <Menu>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact</Link>
-        </Menu>
-      </NavContainer>
-    </Nav>
+    <HeaderContainer>
+      <Nav>
+        <Logo to="/">
+          <img src={logo} alt="Ether Automotive" />
+        </Logo>
+
+        <NavList>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/services">Services</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+        </NavList>
+
+        <QuoteButton
+          as={Link}
+          to="/quote"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span>Get a Quote</span>
+          <span className="material-symbols-rounded">arrow_forward</span>
+        </QuoteButton>
+      </Nav>
+    </HeaderContainer>
   );
-}
+};
+
+export default Navbar;

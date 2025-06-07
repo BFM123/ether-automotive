@@ -1,14 +1,20 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 import {
   ContactWrapper,
   ContactForm,
   ContactInput,
   ContactTextArea,
-  SubmitButton
-} from "../styles/pages/ContactStyles";
+  SubmitButton,
+  ContactInfo
+} from '../styles/pages/ContactStyles';
 
-export default function Contact() {
+const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic here
+  };
+
   return (
     <ContactWrapper>
       <motion.div
@@ -16,15 +22,30 @@ export default function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <h2>Contact Us</h2>
-        <ContactForm onSubmit={(e) => e.preventDefault()}>
-          <ContactInput type="text" placeholder="Name" />
-          <ContactInput type="email" placeholder="Email" />
-          <ContactTextArea placeholder="Message" />
+        <h1>Contact Us</h1>
+        <ContactInfo>
+          <p>Get in touch with our expert team for premium automotive services.</p>
+        </ContactInfo>
+        
+        <ContactForm onSubmit={handleSubmit}>
+          <ContactInput 
+            type="text" 
+            placeholder="Name" 
+            required 
+          />
+          <ContactInput 
+            type="email" 
+            placeholder="Email" 
+            required 
+          />
+          <ContactTextArea 
+            placeholder="Message" 
+            required 
+          />
           <SubmitButton
+            type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            type="submit"
           >
             Send Message
           </SubmitButton>
@@ -32,4 +53,6 @@ export default function Contact() {
       </motion.div>
     </ContactWrapper>
   );
-}
+};
+
+export default Contact;

@@ -1,34 +1,54 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { PageWrapper } from '../shared/LayoutStyles';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  HeroSection,
+  HeroContainer,
+  HeroContent,
+  SubTitle,
+  Title,
+  Description,
+  HeroButton,
+  HeroBanner
+} from '@styles/components/HeroStyles';
+import heroBg from '@assets/images/hero-bg.jpg';
+import heroBanner from '@assets/images/hero-banner.png';
 
-export const ServicesWrapper = styled(PageWrapper)`
-  h2 {
-    text-align: center;
-    margin-bottom: ${({ theme }) => theme.spacing.large};
-  }
-`;
+const Hero = () => {
+  return (
+    <HeroSection style={{ backgroundImage: `url(${heroBg})` }}>
+      <HeroContainer>
+        <HeroContent
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <SubTitle>We have talented engineers & mechanics</SubTitle>
+          <Title>Auto-Detailing, Car Wash, Service</Title>
+          <Description>
+            Keep the engine strong and the journey long, With service that's quick and never wrong.
+            Precision care for your vehicle. Because safety and performance matter.
+          </Description>
+          <HeroButton
+            as={Link}
+            to="/services"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>Our Services</span>
+            <span className="material-symbols-rounded">arrow_forward</span>
+          </HeroButton>
+        </HeroContent>
 
-export const ServiceGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: ${({ theme }) => theme.spacing.large};
-  padding: ${({ theme }) => theme.spacing.medium};
-`;
+        <HeroBanner
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <img src={heroBanner} alt="red motor vehicle" className="move-anim" />
+        </HeroBanner>
+      </HeroContainer>
+    </HeroSection>
+  );
+};
 
-export const ServiceCard = styled(motion.article)`
-  background: ${({ theme }) => theme.colors.surface};
-  padding: ${({ theme }) => theme.spacing.large};
-  border-radius: 8px;
-  text-align: center;
-  
-  h3 {
-    color: ${({ theme }) => theme.colors.primary};
-    margin-bottom: ${({ theme }) => theme.spacing.medium};
-  }
-
-  p {
-    color: ${({ theme }) => theme.colors.text};
-    line-height: 1.6;
-  }
-`;
+export default Hero;

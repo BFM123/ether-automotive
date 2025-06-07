@@ -5,8 +5,7 @@ export const theme = {
     background: '#000',
     surface: '#111',
     text: '#fff',
-    border: '#333',
-    accent: '#e60000'
+    border: '#333'
   },
   spacing: {
     xs: '4px',
@@ -19,5 +18,10 @@ export const theme = {
   layout: {
     maxWidth: '1200px',
     headerHeight: '80px'
+  },
+  breakpoints: {
+    mobile: '576px',
+    tablet: '768px',
+    desktop: '1024px'
   }
 };

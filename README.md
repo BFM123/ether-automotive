@@ -8,7 +8,7 @@ This project is a React-based website for Ether Automotive, showcasing their inn
 ether-automotive-website
 ├── src
 │   ├── assets
-│   │   └── logo.png
+│   │   └── logo.jpeg
 │   ├── components
 │   │   ├── Navbar.jsx
 │   │   ├── Footer.jsx
